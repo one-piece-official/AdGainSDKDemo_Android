@@ -3,10 +3,14 @@
 **注意：**
 
 - 本 SDK 最低兼容 `Android API 21（Android 5.0）`
+
 - 竞胜竞败回传：AdGain平台根据媒体传回来的竞胜竞败价格，通过相应算法自动提高出价来获得广告曝光，媒体RTB时一定要调用，否则会导致价格出不上去。
+
 - 媒体接入信通院 `oaid-sdk`，在初始化的时候可以通过CustomController里面的getOaid()传入获取到的oaid
 
+- <strong color='blue'>官网后台：</strong>https://gdsmilemg.datads.cn/
 
+  
 
 ## 一、导入SDK依赖
 
@@ -35,7 +39,7 @@ repositories {
 }
 dependencies {
 	// 集成AdGain SDK需导入的aar
-	implementation(name: 'adgain-sdk-4.2.0', ext: 'aar')
+	implementation(name: 'adgain-sdk-4.2.1', ext: 'aar')
 }
 ```
 
@@ -66,6 +70,8 @@ dependencies {
 
 
 ---
+
+
 
 ## 二、SDK初始化
 
@@ -563,6 +569,8 @@ if (mRewardAd != null) {
 | onRewardAdClosed()                 | 广告关闭                                                     |
 | onAdSkip()                         | 点击广告跳过                                                 |
 
+
+
 ## 六、信息流广告
 
 **6.1 信息流加载**
@@ -856,13 +864,15 @@ android.useAndroidX=true
 
 应用维度参数的key填appId，注意大小写。
 
-如果使用源代码形式；可下载参考Tobid适配器源码：源码地址
+如果使用源代码形式；可下载参考Tobid适配器源码：***[源码地址](https://github.com/one-piece-official/AdGainSDK-Adapter/tree/main/sigmob/ToBidDemo-Android-Beta)***
+
+https://github.com/one-piece-official/AdGainSDK-Adapter/tree/main/sigmob/ToBidDemo-Android-Beta
 
 ### 步骤1：添加自定义网络
 
 《聚合管理》--->《广告网络》--->《管理自定义广告网络》--->《自定义广告网络》
 
-<img src="./imgs/tobid_addnetwork.png" align="left" style="max-width: 600px; width: 70%; ">
+<img src="./imgs/tobid_addnetwork.png" align="left" style="max-width: 600px; width: 100%; ">
 
 ### 步骤2：应用管理--->APP添加关联广告平台
 
@@ -880,7 +890,7 @@ android.useAndroidX=true
 
 《聚合管理》--->《瀑布流管理》--->《选择某一个聚合广告位》--->《添加广告源》--->《选择Adgain》
 
-<img src="./imgs/tobid_codeid.png" align="left"  style="max-width: 600px; width: 70%; ">
+<img src="./imgs/tobid_codeid.png" align="left"  style="max-width: 600px; width: 100%; ">
 
 <div></div>
 
@@ -894,7 +904,9 @@ android.useAndroidX=true
 
 Topon(Taku)自定义广告接入地址：https://help.takuad.com/docs/4M5AIa
 
-**自定义适配器aar文件，添加：adgain_topon_adapter_4.2.0.aar文件**
+如果想源码形式依赖，可下载[***自定义源码：***](https://github.com/one-piece-official/AdGainSDK-Adapter/tree/main/topon)自行修改内容
+
+https://github.com/one-piece-official/AdGainSDK-Adapter/tree/main/topon
 
 **自定义广告源adapter参数**
 
@@ -925,7 +937,7 @@ Topon(Taku)自定义广告接入地址：https://help.takuad.com/docs/4M5AIa
 
 《聚合管理》--->《选择应用》---->《选择广告位》--->《添加广告源》
 
-<img src="./imgs/taku_addcodeid.png"  align="left" style="max-width: 600px; width: 70%; ">
+<img src="./imgs/taku_addcodeid.png"  align="left" style="width: 100%; ">
 
 ***步骤4：代码工程添加 依赖***
 
@@ -939,6 +951,10 @@ Topon(Taku)自定义广告接入地址：https://help.takuad.com/docs/4M5AIa
 
 **自定义适配器aar文件，添加：adgain_gromore_adapter_4.2.0.aar文件**
 
+如果想源码形式依赖，可下载[***自定义源码：***](https://github.com/one-piece-official/AdGainSDK-Adapter/tree/main/gromore)自行修改内容
+
+https://github.com/one-piece-official/AdGainSDK-Adapter/tree/main/gromore
+
 **自定义广告源adapter参数**
 
 | 广告类型 | 广告类名称                                     |
@@ -951,9 +967,9 @@ Topon(Taku)自定义广告接入地址：https://help.takuad.com/docs/4M5AIa
 
 ### 步骤1：添加自定义网络<br>
 
-<img src="./imgs/gm_addnetwork.png"   height="300" align="left" style="margin-top: 10px;"><br>
+<img src="./imgs/gm_addnetwork.png"   height="300" align="left" style="margin-top: 10px;">
 
-***<img src="./imgs/gm_addadapter.png"   align="left" style="max-width: 600px; width: 70%; ">***
+***<img src="./imgs/gm_addadapter.png"   align="left" style=" width: 100%; ">***
 
 
 
@@ -983,7 +999,7 @@ Topon(Taku)自定义广告接入地址：https://help.takuad.com/docs/4M5AIa
 
 《应用管理》--->《选择应用》--->《添加广告网络》
 
-<img src="./imgs/gm_addacount.png"  align="left" style="max-width: 600px; width: 70%; ">
+<img src="./imgs/gm_addacount.png"  align="left" style=" width: 100%; ">
 
 
 
@@ -991,15 +1007,59 @@ Topon(Taku)自定义广告接入地址：https://help.takuad.com/docs/4M5AIa
 
 《瀑布流管理》--->《选择应用》---->《选择广告位》--->《添加代码位》
 
-<img src="./imgs/gm_addcodeid.png"  align="left" style="max-width: 600px; width: 80%; ">
+<img src="./imgs/gm_addcodeid.png"  align="left" style="width: 100%; height:auto ">
 
-***步骤4：代码工程添加 依赖***
+### 步骤4：代码工程添加 依赖
 
 工程代码中放入adgain_gromore_adapter_4.2.0.aar和 adgain-sdk-4.2.0.aar 文件及配置依赖AAR依赖即可
 
+### 步骤5：bidding价格回传
 
+<strong color='red'>注意：</strong>Gromore  IMediationAdSlot 的 isBidNotify 设置为true,竞败时候回传价格都为-1，为无效竞价回传，会影响Adgain 的出价和填充，需要通过Adgain 封装的工具类 GMBiddingUtil进行价格回传
 
+***开屏回传***
 
+```java
+CSJSplashAd.SplashAdListener() {
+    @Override
+    public void onSplashAdShow(CSJSplashAd csjSplashAd) {
+        GMBiddingUtil.gmNotifyLoss(csjSplashAd);
+    }
+```
+
+插屏回传***
+
+```java
+TTFullScreenVideoAd.FullScreenVideoAdInteractionListener() {
+
+    public void onAdShow() {
+        GMBiddingUtil.gmNotifyLoss(mTTFullScreenVideoAd);
+        Log.d(Const.TAG, "InterstitialFull onAdShow");
+    }
+```
+
+***激励视频回传***
+
+```java
+TTRewardVideoAd.RewardAdInteractionListener() {
+    @Override
+
+    public void onAdShow() {
+        Log.i(Const.TAG, "reward show");
+        GMBiddingUtil.gmNotifyLoss(mTTRewardVideoAd);
+    }
+```
+
+***信息流回传***
+
+```java
+ MediationExpressRenderListener() {
+    @Override
+    public void onAdShow() {
+        Log.d(tag, "feed express show");
+        GMBiddingUtil.gmNotifyLoss(mTTFeedAd);
+    }
+```
 
 ## 十一、 测试广告位ID
 
@@ -1016,5 +1076,4 @@ Topon(Taku)自定义广告接入地址：https://help.takuad.com/docs/4M5AIa
 | 信息流自渲染ID | 11001846 |
 | 信息流模板ID   | 11001804 |
 | 信息流模板ID1   | 110018041 |
-
 
