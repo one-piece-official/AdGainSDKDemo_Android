@@ -1,0 +1,2 @@
+rootProject.name = "adgaindemo"
+include ':sdk_demo'
