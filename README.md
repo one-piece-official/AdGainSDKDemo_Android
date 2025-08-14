@@ -38,7 +38,7 @@ repositories {
   }
 }
 dependencies {
-	// 集成AdGain SDK需导入的aar
+	// 集成AdGain SDK需导入的aar,以 AdGain/libs/的版本为准
 	implementation(name: 'adgain-sdk-4.2.1', ext: 'aar')
 }
 ```
@@ -844,7 +844,11 @@ android.enableJetifier=true
 android.useAndroidX=true
 ```
 
+**7.6  Demo运行问题**
 
+如果demo 运行不起来，可以检查gradle 版本，如图，可切换其他版本尝试
+
+<img src="./imgs/demo_debug.png" align="left" style=" width: 100%; ">
 
 ## 八、Tobid自定义广告接入文档
 
@@ -896,7 +900,7 @@ https://github.com/one-piece-official/AdGainSDK-Adapter/tree/main/sigmob/ToBidDe
 
 ***步骤4：代码工程添加 依赖***<br>
 
-工程代码中放入adgain_tobid_adapter_4.2.0.aar和 adgain-sdk-4.2.0.aar 文件及配置依赖AAR依赖即可
+工程代码中放入adgain_tobid_adapter_4.2.0.aar和 adgain-sdk-4.2.0.aar 文件及配置依赖AAR依赖即可，AAR文件在AdGain/libs/文件夹下，版本以该文件夹下的版本为准
 
 
 
@@ -941,7 +945,7 @@ https://github.com/one-piece-official/AdGainSDK-Adapter/tree/main/topon
 
 ***步骤4：代码工程添加 依赖***
 
-工程代码中放入adgain_topon_adapter_4.2.0.aar和 adgain-sdk-4.2.0.aar 文件及配置依赖AAR依赖即可
+工程代码中放入adgain_topon_adapter_4.2.0.aar和 adgain-sdk-4.2.0.aar 文件及配置依赖AAR依赖即可，AAR文件在AdGain/libs/文件夹下，版本以该文件夹下的版本为准
 
 
 
@@ -1011,7 +1015,7 @@ https://github.com/one-piece-official/AdGainSDK-Adapter/tree/main/gromore
 
 ### 步骤4：代码工程添加 依赖
 
-工程代码中放入adgain_gromore_adapter_4.2.0.aar和 adgain-sdk-4.2.0.aar 文件及配置依赖AAR依赖即可
+工程代码中放入adgain_gromore_adapter_4.2.0.aar和 adgain-sdk-4.2.0.aar 文件及配置依赖AAR依赖即可，AAR文件在AdGain/libs/文件夹下，版本以该文件夹下的版本为准
 
 ### 步骤5：bidding价格回传
 
