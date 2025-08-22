@@ -64,8 +64,9 @@ dependencies {
 
 ```java
 # Adgain混淆
--dontwarn com.adgain.sdk.*
--keep class com.adgain.sdk.* {*;}
+-dontwarn com.adgain.sdk.**
+-keep class com.adgain.sdk.** {*;}
+-keep interface com.adgain.**{ *;}
 ```
 
 
@@ -1031,7 +1032,7 @@ CSJSplashAd.SplashAdListener() {
     }
 ```
 
-插屏回传***
+***插屏回传***
 
 ```java
 TTFullScreenVideoAd.FullScreenVideoAdInteractionListener() {
@@ -1067,10 +1068,6 @@ TTRewardVideoAd.RewardAdInteractionListener() {
 
 ## 十一、 测试广告位ID
 
-
-
-
-
 | 广告类型       | 广告ID   |
 | -------------- | -------- |
 | AppId          | 11000500 |
@@ -1079,5 +1076,14 @@ TTRewardVideoAd.RewardAdInteractionListener() {
 | 激励视频ID     | 11001805 |
 | 信息流自渲染ID | 11001846 |
 | 信息流模板ID   | 11001804 |
-| 信息流模板ID1   | 110018041 |
+
+
+## 十二、 更新文档
+
+   **v4.2.1**
+1. 新增氛围组件和滑动交互
+2. 增加广告是否有效的时间限制
+3. 信息流交互优化
+4. 已知问题优化
+<br>
 
