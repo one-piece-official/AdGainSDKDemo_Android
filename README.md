@@ -889,7 +889,7 @@ https://github.com/one-piece-official/AdGainSDK-Adapter/tree/main/sigmob/ToBidDe
 
 《聚合管理》--->《流量管理》--->《应用管理》--->《+》
 
-<img src="./imgs/tobid_bindapp.png"  height="300" align="left" style="margin-top: 100px;">
+<img src="./imgs/tobid_bindapp.png"   align="left" style="margin-top: 100px;width: 100%;">
 
 ### 步骤3：添加AdGain广告位
 
@@ -932,7 +932,7 @@ https://github.com/one-piece-official/AdGainSDK-Adapter/tree/main/topon
 
 《应用管理》--->《选择应用》---->《关联广告平台》
 
-<img src="./imgs/taku_addaccount.png" alt="taku_addaccount"  height="300" align="left" style="margin-top: 10px;">
+<img src="./imgs/taku_addaccount.png" alt="taku_addaccount"  align="left" style="width: 100%; margin-top: 10px;" >
 
 
 
