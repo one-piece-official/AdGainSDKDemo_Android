@@ -55,6 +55,14 @@
         android:gravity="center"
         android:text="信息流" />
 
+    <Button
+        android:id="@+id/banner_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:gravity="center"
+        android:text="Banner广告" />
+
 
     <Button
         android:id="@+id/cleanLog_button"

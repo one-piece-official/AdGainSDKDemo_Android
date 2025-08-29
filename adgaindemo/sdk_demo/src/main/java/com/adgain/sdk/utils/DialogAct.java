@@ -32,6 +32,7 @@ public class DialogAct extends AppCompatActivity {
         if (!isFirst) {
             Intent intent = new Intent(DialogAct.this, MainActivity.class);
             startActivity(intent);
+            finish();
         }
         findViewById(R.id.close).setOnClickListener(new View.OnClickListener() {
             @Override

@@ -28,6 +28,7 @@ import com.adgain.sdk.api.AdGainSdkConfig;
 import com.adgain.sdk.api.CustomController;
 import com.adgain.sdk.api.InitCallback;
 import com.adgain.sdk.natives.NativeAdDemoActivity;
+import com.adgain.sdk.banner.BannerDemoActivity;
 import com.adgain.demo.android.R;
 
 import java.util.Date;
@@ -53,6 +54,7 @@ public class MainFragment extends Fragment {
     private Button interstitialButton;
     private Button rewardButton;
     private Button nativeButton;
+    private Button bannerButton;
     private TextView logView;
 
     @Override
@@ -69,6 +71,7 @@ public class MainFragment extends Fragment {
         interstitialButton = view.findViewById(R.id.interstitial_button);
         rewardButton = view.findViewById(R.id.reward_button);
         nativeButton = view.findViewById(R.id.native_button);
+        bannerButton = view.findViewById(R.id.banner_button);
         logView = view.findViewById(R.id.logView);
         // Set click listeners
         view.findViewById(R.id.splash_button_load).setOnClickListener(v -> loadSplashAd());
@@ -92,6 +95,10 @@ public class MainFragment extends Fragment {
 
         nativeButton.setOnClickListener(v -> {
             Intent intent = new Intent(getMyActivity(), NativeAdDemoActivity.class);
+            startActivity(intent);
+        });
+        bannerButton.setOnClickListener(v -> {
+            Intent intent = new Intent(getMyActivity(), BannerDemoActivity.class);
             startActivity(intent);
         });
         view.findViewById(R.id.sdk_init).setOnClickListener(new View.OnClickListener() {

@@ -46,6 +46,10 @@
             android:configChanges="orientation|screenSize"
             android:screenOrientation="portrait" />
         <activity
+            android:name="com.adgain.sdk.banner.BannerDemoActivity"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="portrait" />
+        <activity
             android:name="com.adgain.sdk.ui.InterstitialActivity"
             android:configChanges="orientation|screenSize"
             android:screenOrientation="portrait" />

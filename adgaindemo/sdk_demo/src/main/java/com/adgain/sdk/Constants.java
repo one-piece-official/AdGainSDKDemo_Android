@@ -10,5 +10,6 @@ public class Constants {
     public static final String REWARD_ADCOID = "11001805";
     public static final String NATIVE_ADCOID = "11001846";
     public static final String EXPRESS_ADCOID = "11001804";
+    public static final String BANNER_ADCOID = "11002037";
 
 }
