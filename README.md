@@ -571,7 +571,6 @@ if (mRewardAd != null) {
 | onAdSkip()                         | 点击广告跳过                                                 |
 
 
-
 ## 六、信息流广告
 
 **6.1 信息流加载**
@@ -739,6 +738,111 @@ if (nativeAd != null) {
 
 2、信息流模板通过setNativeAdEventListener和setNativeAdMediaListener对信息流模板进行监听
 
+## 七、横幅广告
+
+**7.1 横幅广告加载**
+
+```java
+ AdRequest adRequest = new AdRequest.Builder()
+                .setCodeId(codeID)
+                .build();
+
+        mBannerAd = new BannerAd(adRequest, listener, true, true);
+
+        mBannerAd.loadAd();
+
+```
+
+**7.2 横幅广告展示**
+
+```java
+if (mBannerAd != null && mBannerAd.isReady()) {
+     View bannerView = mBannerAd.getBannerView();
+     if (bannerView != null) {
+           bannerContainer.addView(bannerView);
+       }
+}
+```
+
+**7.3 BannerAdListener回调**
+
+            BannerAdListener listener = new BannerAdListener() {
+
+            @Override
+            public void onBannerAdLoadSuccess() {
+                
+            }
+
+            @Override
+            public void onBannerAdShow() {
+
+            }
+
+            @Override
+            public void onBannerAdClick() {
+
+            }
+
+            @Override
+            public void onBannerAdClosed() {
+
+            }
+
+            @Override
+            public void onBannerAdLoadError(AdError error) {
+
+            }
+            
+           @Override
+		    public void onBannerAdShowError(AdError adError) {
+		        
+		    }
+		    
+        };
+
+**7.4 横幅广告销毁**
+
+```java
+if (mBannerAd != null) {
+    mBannerAd.destroyAd();
+    mBannerAd = null;
+}
+```
+
+**7.5 激励视频API介绍**
+
+***7.5.1 BannerAd***
+> com.adgain.sdk.api.BannerAd
+
+| 方法名 | 方法介绍 |
+| --- | --- |
+| BannerAd(AdRequest adRequest, BannerAdListener adListener),boolean showCloseButton, boolean autoRefreshEnabled | 构造方法。参数说明：request（广告请求对象）、adListener（广告状态回调监听）、是否展示关闭按钮、是否自动刷新             |
+| loadAd() | 拉取广告  |
+| isReady() | 广告是否准备好，未准备好广告将无法展示                     |
+| getBidPrice() | 获取广告价格，单位分 |
+| getBannerView() | 展示时，返回广告View |
+| destroyAd() | 销毁广告 |
+
+***7.5.2 AdRequest***
+> com.adgain.sdk.api.AdRequest.Builder
+
+| 方法名 | 方法介绍 |
+| --- | --- |
+| setCodeId(String codeid) | 设置广告位ID |
+| setBidFloor(int bidFloor) | 设置广告请求的底价，单位分。 |
+| setExtOption(Map<String,Object> option) | 设置扩展参数。参数说明：options（扩展参数，可传任意） |
+
+***7.5.3 BannerAdListener***
+> com.adgain.sdk.api.BannerAdListener
+
+| 方法名 | 方法介绍 |
+| --- | --- |
+| onBannerAdLoadSuccess() | 广告server接口请求成功                |
+| onBannerAdLoadError(AdError error)| 广告加载失败。参数说明：error（报错信息，具体可看其内部code和message） |
+| onBannerAdShow () | 广告展示 |
+| onBannerAdClick() | 广告被点击|
+| onBannerAdClosed() | 广告关闭 |
+
 
 
 ## 七、错误码及常见问题 
@@ -866,6 +970,7 @@ android.useAndroidX=true
 | 插屏     | com.tobid.adapter.adgain.AdGainCustomerInterstitial |
 | 激励视频 | com.tobid.adapter.adgain.AdGainCustomerReward       |
 | 原生     | com.tobid.adapter.adgain.AdGainCustomerNative       |
+| 横幅     | com.tobid.adapter.adgain.AdGainCustomerBanner |
 
 应用维度参数的key填appId，注意大小写。
 
@@ -889,7 +994,7 @@ https://github.com/one-piece-official/AdGainSDK-Adapter/tree/main/sigmob/ToBidDe
 
 《聚合管理》--->《流量管理》--->《应用管理》--->《+》
 
-<img src="./imgs/tobid_bindapp.png"   align="left" style="margin-top: 100px;width: 100%;">
+<img src="./imgs/tobid_bindapp.png"  height="300" align="left" style="margin-top: 100px;">
 
 ### 步骤3：添加AdGain广告位
 
@@ -921,6 +1026,7 @@ https://github.com/one-piece-official/AdGainSDK-Adapter/tree/main/topon
 | 插屏     | com.ad.taku.adgainadapter.AdGainInterstitialAdapter  |
 | 激励视频 | com.ad.taku.adgainadapter.AdGainRewardedVideoAdapter |
 | 原生     | com.ad.taku.adgainadapter.AdGainNativeAdapter        |
+| 横幅     | com.ad.taku.adgainadapter.AdGainBannerAdapter        |
 
 ### 步骤1：添加自定义网络<br>
 
@@ -932,7 +1038,7 @@ https://github.com/one-piece-official/AdGainSDK-Adapter/tree/main/topon
 
 《应用管理》--->《选择应用》---->《关联广告平台》
 
-<img src="./imgs/taku_addaccount.png" alt="taku_addaccount"  align="left" style="width: 100%; margin-top: 10px;" >
+<img src="./imgs/taku_addaccount.png" alt="taku_addaccount"  height="300" align="left" style="margin-top: 10px;">
 
 
 
@@ -1076,9 +1182,15 @@ TTRewardVideoAd.RewardAdInteractionListener() {
 | 激励视频ID     | 11001805 |
 | 信息流自渲染ID | 11001846 |
 | 信息流模板ID   | 11001804 |
+| 横幅ID         | 11002037 |
 
 
 ## 十二、 更新文档
+   **v4.2.2**
+1. 新增Banner广告类型
+2. Gromore 获取竞价回传价格
+3. 已知问题优化
+<br>
 
    **v4.2.1**
 1. 新增氛围组件和滑动交互
