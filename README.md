@@ -845,9 +845,9 @@ if (mBannerAd != null) {
 
 
 
-## 七、错误码及常见问题 
+## 八、错误码及常见问题 
 
-**7.1  ADGainSDK 错误码信息说明**
+**8.1  ADGainSDK 错误码信息说明**
 
 > 相关错误信息可参考此翻译表。
 
@@ -872,7 +872,7 @@ if (mBannerAd != null) {
 | 100305    | 广告Activity不能为null                | 展示广告的Activity不能为null                         |
 | 117       | 无广告填充                            | 正常报错，该次请求无广告填充                         |
 
-**7.2 targetSdkVersion 28以上http支持**
+**8.2 targetSdkVersion 28以上http支持**
 
 ```xml
 </manifest>
@@ -889,7 +889,7 @@ network_security_config.xml 文件配置
 </network-security-config>
 ```
 
-**7.2. 系统installProvider失败或者开启MultiDex导致的Not find Class**
+**8.3 系统installProvider失败或者开启MultiDex导致的Not find Class**
 
 > 参考链接 <https://developer.android.com/studio/build/multidex>
 
@@ -904,7 +904,7 @@ android {
 }
 ```
 
-**7.4 方法数65k问题解决**
+**8.4 方法数65k问题解决**
 
 > 参考链接 <https://developer.android.com/studio/build/multidex>
 
@@ -940,7 +940,7 @@ public class MyAppcation extends MultiDexApplication {
 }
 ```
 
-**7.5  AndroidX与Android support 冲突**
+**8.5  AndroidX与Android support 冲突**
 
 > 在项目根目录下文件gradle.properties，添加以下代码
 
@@ -949,13 +949,13 @@ android.enableJetifier=true
 android.useAndroidX=true
 ```
 
-**7.6  Demo运行问题**
+**8.6  Demo运行问题**
 
 如果demo 运行不起来，可以检查gradle 版本，如图，可切换其他版本尝试
 
 <img src="./imgs/demo_debug.png" align="left" style=" width: 100%; ">
 
-## 八、Tobid自定义广告接入文档
+## 九、Tobid自定义广告接入文档
 
 [Tobid自定义广告接入文档地址: ]: https://doc.sigmob.com/ToBid使用指南/高级功能说明/自定义广告网络/
 
@@ -1010,7 +1010,7 @@ https://github.com/one-piece-official/AdGainSDK-Adapter/tree/main/sigmob/ToBidDe
 
 
 
-## 九、Topon 自定义广告接入文档
+## 十、Topon 自定义广告接入文档
 
 Topon(Taku)自定义广告接入地址：https://help.takuad.com/docs/4M5AIa
 
@@ -1056,7 +1056,7 @@ https://github.com/one-piece-official/AdGainSDK-Adapter/tree/main/topon
 
 
 
-## 十、Gromore 自定义广告接入文档
+## 十一、Gromore 自定义广告接入文档
 
 **有需要可以找SDK开发者索要aar文件**
 
@@ -1172,7 +1172,7 @@ TTRewardVideoAd.RewardAdInteractionListener() {
     }
 ```
 
-## 十一、 测试广告位ID
+## 十二、 测试广告位ID
 
 | 广告类型       | 广告ID   |
 | -------------- | -------- |
@@ -1185,7 +1185,7 @@ TTRewardVideoAd.RewardAdInteractionListener() {
 | 横幅ID         | 11002037 |
 
 
-## 十二、 更新文档
+## 十三、 更新文档
    **v4.2.2**
 1. 新增Banner广告类型
 2. Gromore 获取竞价回传价格
