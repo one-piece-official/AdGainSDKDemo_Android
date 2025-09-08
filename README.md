@@ -767,37 +767,37 @@ if (mBannerAd != null && mBannerAd.isReady()) {
 **7.3 BannerAdListener回调**
 
             BannerAdListener listener = new BannerAdListener() {
-
+    
             @Override
             public void onBannerAdLoadSuccess() {
                 
             }
-
+    
             @Override
             public void onBannerAdShow() {
-
+    
             }
-
+    
             @Override
             public void onBannerAdClick() {
-
+    
             }
-
+    
             @Override
             public void onBannerAdClosed() {
-
+    
             }
-
+    
             @Override
             public void onBannerAdLoadError(AdError error) {
-
+    
             }
             
            @Override
-		    public void onBannerAdShowError(AdError adError) {
-		        
-		    }
-		    
+    	    public void onBannerAdShowError(AdError adError) {
+    	        
+    	    }
+    	    
         };
 
 **7.4 横幅广告销毁**
@@ -1004,7 +1004,7 @@ https://github.com/one-piece-official/AdGainSDK-Adapter/tree/main/sigmob/ToBidDe
 
 <div></div>
 
-***步骤4：代码工程添加 依赖***<br>
+***步骤4：代码工程添加 依赖***
 
 工程代码中放入adgain_tobid_adapter_4.2.0.aar和 adgain-sdk-4.2.0.aar 文件及配置依赖AAR依赖即可，AAR文件在AdGain/libs/文件夹下，版本以该文件夹下的版本为准
 
@@ -1028,13 +1028,13 @@ https://github.com/one-piece-official/AdGainSDK-Adapter/tree/main/topon
 | 原生     | com.ad.taku.adgainadapter.AdGainNativeAdapter        |
 | 横幅     | com.ad.taku.adgainadapter.AdGainBannerAdapter        |
 
-### 步骤1：添加自定义网络<br>
+### 步骤1：添加自定义网络
 
 <img src="./imgs/taku_addnetwork.png" alt="taku_addnetwork"  height="300" align="left" style="margin-top: 10px;">
 
 ***<br>***
 
-### 步骤2：应用管理--->APP添加关联广告平台<br>
+### 步骤2：应用管理--->APP添加关联广告平台
 
 《应用管理》--->《选择应用》---->《关联广告平台》
 
@@ -1044,7 +1044,7 @@ https://github.com/one-piece-official/AdGainSDK-Adapter/tree/main/topon
 
 <br>
 
-### 步骤3：添加AdGain广告位<br>
+### 步骤3：添加AdGain广告位
 
 《聚合管理》--->《选择应用》---->《选择广告位》--->《添加广告源》
 
@@ -1076,7 +1076,7 @@ https://github.com/one-piece-official/AdGainSDK-Adapter/tree/main/gromore
 | 激励视频 | com.gromore.adapter.adgain.AdGainRewardAdapter |
 | 原生     | com.gromore.adapter.adgain.AdGainNativeAdapter |
 
-### 步骤1：添加自定义网络<br>
+### 步骤1：添加自定义网络
 
 <img src="./imgs/gm_addnetwork.png"   height="300" align="left" style="margin-top: 10px;">
 
@@ -1106,7 +1106,7 @@ https://github.com/one-piece-official/AdGainSDK-Adapter/tree/main/gromore
 
 
 
-### 步骤2：应用管理--->APP添加关联广告平台<br>
+### 步骤2：应用管理--->APP添加关联广告平台
 
 《应用管理》--->《选择应用》--->《添加广告网络》
 
@@ -1114,7 +1114,7 @@ https://github.com/one-piece-official/AdGainSDK-Adapter/tree/main/gromore
 
 
 
-### 步骤3：添加AdGain广告位<br>
+### 步骤3：添加AdGain广告位
 
 《瀑布流管理》--->《选择应用》---->《选择广告位》--->《添加代码位》
 
@@ -1172,6 +1172,18 @@ TTRewardVideoAd.RewardAdInteractionListener() {
     }
 ```
 
+***Banner回传***
+
+```java
+this.mBannerInteractionListener = new TTNativeExpressAd.ExpressAdInteractionListener() {
+    @Override
+    public void onAdShow(View view, int i) {
+        GMBiddingUtil.gmNotifyLoss(mBannerAd);
+    }
+```
+
+
+
 ## 十二、 测试广告位ID
 
 | 广告类型       | 广告ID   |
@@ -1190,7 +1202,7 @@ TTRewardVideoAd.RewardAdInteractionListener() {
 1. 新增Banner广告类型
 2. Gromore 获取竞价回传价格
 3. 已知问题优化
-<br>
+   <br>
 
    **v4.2.1**
 1. 新增氛围组件和滑动交互
