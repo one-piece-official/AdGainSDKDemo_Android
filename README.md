@@ -974,9 +974,9 @@ android.useAndroidX=true
 
 应用维度参数的key填appId，注意大小写。
 
-如果使用源代码形式；可下载参考Tobid适配器源码：***[源码地址](https://github.com/one-piece-official/AdGainSDK-Adapter/tree/main/sigmob/ToBidDemo-Android-Beta)***
+如果使用源代码形式；可下载参考Tobid适配器源码：***[源码地址](https://gitee.com/adgain_sdk/AdGainSDK_Android_Adapter/tree/master/tobid)***
 
-https://github.com/one-piece-official/AdGainSDK-Adapter/tree/main/sigmob/ToBidDemo-Android-Beta
+https://gitee.com/adgain_sdk/AdGainSDK_Android_Adapter/tree/master/tobid
 
 ### 步骤1：添加自定义网络
 
@@ -1014,9 +1014,9 @@ https://github.com/one-piece-official/AdGainSDK-Adapter/tree/main/sigmob/ToBidDe
 
 Topon(Taku)自定义广告接入地址：https://help.takuad.com/docs/4M5AIa
 
-如果想源码形式依赖，可下载[***自定义源码：***](https://github.com/one-piece-official/AdGainSDK-Adapter/tree/main/topon)自行修改内容
+如果想源码形式依赖，可下载[***自定义源码：***](https://gitee.com/adgain_sdk/AdGainSDK_Android_Adapter/tree/master/taku)自行修改内容
 
-https://github.com/one-piece-official/AdGainSDK-Adapter/tree/main/topon
+https://gitee.com/adgain_sdk/AdGainSDK_Android_Adapter/tree/master/taku
 
 **自定义广告源adapter参数**
 
@@ -1058,13 +1058,11 @@ https://github.com/one-piece-official/AdGainSDK-Adapter/tree/main/topon
 
 ## 十一、Gromore 自定义广告接入文档
 
-**有需要可以找SDK开发者索要aar文件**
-
 **自定义适配器aar文件，添加：adgain_gromore_adapter_4.2.0.aar文件**
 
-如果想源码形式依赖，可下载[***自定义源码：***](https://github.com/one-piece-official/AdGainSDK-Adapter/tree/main/gromore)自行修改内容
+如果想源码形式依赖，可下载[***自定义源码：***](https://gitee.com/adgain_sdk/AdGainSDK_Android_Adapter/tree/master/gromore)自行修改内容
 
-https://github.com/one-piece-official/AdGainSDK-Adapter/tree/main/gromore
+https://gitee.com/adgain_sdk/AdGainSDK_Android_Adapter/tree/master/gromore
 
 **自定义广告源adapter参数**
 
