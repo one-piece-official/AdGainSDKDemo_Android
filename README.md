@@ -1073,6 +1073,9 @@ https://gitee.com/adgain_sdk/AdGainSDK_Android_Adapter/tree/master/gromore
 | 插屏     | com.gromore.adapter.adgain.AdGainInterAdapter  |
 | 激励视频 | com.gromore.adapter.adgain.AdGainRewardAdapter |
 | 原生     | com.gromore.adapter.adgain.AdGainNativeAdapter |
+| 横幅     | com.gromore.adapter.adgain.AdGainBannerAdapter |
+
+
 
 ### 步骤1：添加自定义网络
 
@@ -1196,16 +1199,23 @@ this.mBannerInteractionListener = new TTNativeExpressAd.ExpressAdInteractionList
 
 
 ## 十三、 更新文档
-   **v4.2.2**
+
+
+**v4.2.2**
+
 1. 新增Banner广告类型
 2. Gromore 获取竞价回传价格
 3. 已知问题优化
-   <br>
+4. 极光聚合适配
 
-   **v4.2.1**
+**v4.2.1**
+
 1. 新增氛围组件和滑动交互
+
 2. 增加广告是否有效的时间限制
+
 3. 信息流交互优化
+
 4. 已知问题优化
 <br>
 
