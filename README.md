@@ -1038,11 +1038,7 @@ https://gitee.com/adgain_sdk/AdGainSDK_Android_Adapter/tree/master/taku
 
 《应用管理》--->《选择应用》---->《关联广告平台》
 
-<img src="./imgs/taku_addaccount.png" alt="taku_addaccount"  height="300" align="left" style="margin-top: 10px;">
-
-
-
-<br>
+<img src="./imgs/taku_addaccount.png" alt="taku_addaccount" align="left" style="margin-top: 10px; width:90% ">
 
 ### 步骤3：添加AdGain广告位
 
