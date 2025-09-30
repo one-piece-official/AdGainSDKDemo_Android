@@ -1193,9 +1193,20 @@ this.mBannerInteractionListener = new TTNativeExpressAd.ExpressAdInteractionList
 | 信息流模板ID   | 11001804 |
 | 横幅ID         | 11002037 |
 
+## 十三、 微信小程序支持
+```java
+AdGainSdk.getInstance().setWXAppId("微信开放平台APPID");
+```
+[微信开放平台地址：https://open.weixin.qq.com/cgi-bin/applist](https://open.weixin.qq.com/cgi-bin/applist)
 
-## 十三、 更新文档
+## 十四、 更新文档
 
+**v4.2.3**
+
+1. 增加微信小程序小游戏调起预算
+2. 下载拉新类预算合规优化
+3. 插屏、激励交互优化
+4. 内部打点链路优化
 
 **v4.2.2**
 
@@ -1213,5 +1224,5 @@ this.mBannerInteractionListener = new TTNativeExpressAd.ExpressAdInteractionList
 3. 信息流交互优化
 
 4. 已知问题优化
-<br>
+
 
