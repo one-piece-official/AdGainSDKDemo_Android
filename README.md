@@ -1199,6 +1199,8 @@ AdGainSdk.getInstance().setWXAppId("微信开放平台APPID");
 ```
 [微信开放平台地址：https://open.weixin.qq.com/cgi-bin/applist](https://open.weixin.qq.com/cgi-bin/applist)
 
+微信APPID获取示意图:<img src="./imgs/wxappid.png"  align="left" style="width: 100%; height:auto ">
+
 ## 十四、 更新文档
 
 **v4.2.3**
