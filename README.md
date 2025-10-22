@@ -600,7 +600,7 @@ NativeAdData nativeAdData = currentAdDataList.get(0);
 NativeAdData nativeAdData = currentAdDataList.get(0);
 View feedView = nativeAdData.getFeedView();
 adContainer.addView(data.getFeedView());
-nativeAdData.setNativeAdEventListener(listener);
+nativeAdData.setNativeAdEventListener(new NativeAdAllEventListener);
 nativeAdData.setNativeAdMediaListener(nativeAdMediaListener);
 ```
 
@@ -1181,7 +1181,42 @@ this.mBannerInteractionListener = new TTNativeExpressAd.ExpressAdInteractionList
 
 
 
-## 十二、 测试广告位ID
+## 十二、AdScope(倍孜)自定义广告接入文档
+
+**自定义适配器aar文件，添加：adgain_beizi_adapter_4.2.3.2.aar文件**
+
+如果想源码形式依赖，可下载[***自定义源码：***](https://gitee.com/adgain_sdk/AdGainSDK_Android_Adapter/tree/master/gromore)自行修改内容
+
+https://gitee.com/adgain_sdk/AdGainSDK_Android_Adapter/tree/master/beizi
+
+**自定义广告源adapter参数**
+
+| 广告类型 | 广告类名称                                         |
+| -------- | -------------------------------------------------- |
+| 初始化   | com.adgain.amps.adapter.AdGainInitAdapter          |
+| 开屏     | com.adgain.amps.adapter.AdGainSplashAdapter        |
+| 插屏     | com.adgain.amps.adapter.AdGainInterstitialAdapter  |
+| 激励视频 | com.adgain.amps.adapter.AdGainRewardAdapter        |
+| 原生     | com.adgain.amps.adapter.AdGainUnifiedNativeAdapter |
+| 横幅     | com.adgain.amps.adapter.AdGainBannerAdapter        |
+
+### 步骤1：添加自定义网络
+
+《广告平台》--->《自定义广告平台》---->《配置自定义广告类名》
+
+<img src="./imgs/adscope_addaccount.png"  align="left" style="width: 100%; height:auto ">
+
+### 步骤2：添加广告位
+
+<img src="./imgs/adscope_add_codeid.png"  align="left" style="width: 100%; height:auto ">
+
+**注意：**
+
+倍孜聚合创建应用ID 之后不能修改，从测试ID 切到正式ID 需要重新创建一个新的自定义渠道
+
+
+
+## 十三、 测试广告位ID
 
 | 广告类型       | 广告ID   |
 | -------------- | -------- |
@@ -1193,7 +1228,7 @@ this.mBannerInteractionListener = new TTNativeExpressAd.ExpressAdInteractionList
 | 信息流模板ID   | 11001804 |
 | 横幅ID         | 11002037 |
 
-## 十三、 微信小程序支持
+## 十四、 微信小程序支持
 ```java
 AdGainSdk.getInstance().setWXAppId("微信开放平台APPID");
 ```
@@ -1201,7 +1236,7 @@ AdGainSdk.getInstance().setWXAppId("微信开放平台APPID");
 
 微信APPID获取示意图:<img src="./imgs/wxappid.png"  align="left" style="width: 100%; height:auto ">
 
-## 十四、 更新文档
+## 十五、 更新文档
 
 **v4.2.3**
 
@@ -1226,5 +1261,4 @@ AdGainSdk.getInstance().setWXAppId("微信开放平台APPID");
 3. 信息流交互优化
 
 4. 已知问题优化
-
 
