@@ -1208,7 +1208,7 @@ https://gitee.com/adgain_sdk/AdGainSDK_Android_Adapter/tree/master/beizi
 
 ### 步骤2：添加广告位
 
-<img src="./imgs/adscope_add_codeid.png"  align="left" style="width: 100%; height:auto ">
+<img src="./imgs/adscope_addcodeid.png"  align="left" style="width: 100%; height:auto ">
 
 **注意：**
 
