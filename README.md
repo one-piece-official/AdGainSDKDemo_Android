@@ -1236,6 +1236,22 @@ AdGainSdk.getInstance().setWXAppId("微信开放平台APPID");
 
 微信APPID获取示意图:<img src="./imgs/wxappid.png"  align="left" style="width: 100%; height:auto ">
 
+**Tobid 聚合配置AdGain 需要的微信APPID**
+
+<img src="./imgs/tobid_wxappid.png"  align="left" style="width: 100%; height:auto ">
+
+
+
+**Taku 聚合配置AdGain 需要的微信APPID**
+
+<img src="./imgs/taku_wxappid.png"  align="left" style="width: 100%; height:auto ">
+
+**Gromore 聚合配置AdGain 需要的微信APPID**
+
+Gromore的微信appid 配置在广告位层级
+
+<img src="./imgs/gm_wxappid.png"  align="left" style="width: 100%; height:auto ">
+
 ## 十五、 更新文档
 
 **v4.2.3**
