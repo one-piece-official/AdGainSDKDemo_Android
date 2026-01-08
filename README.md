@@ -10,6 +10,8 @@
 
 - <strong color='blue'>官网后台：</strong>https://gdsmilemg.datads.cn/
 
+- <strong>隐私链接：</strong>http://www.adgain.cn/privacy-policy.html
+
   
 
 ## 一、导入SDK依赖
@@ -959,7 +961,7 @@ android.useAndroidX=true
 
 [Tobid自定义广告接入文档地址: ]: https://doc.sigmob.com/ToBid使用指南/高级功能说明/自定义广告网络/
 
-**自定义适配器aar文件，添加：adgain_tobid_adapter_4.2.0.aar文件**
+**自定义适配器aar文件，添加：adgain_tobid_adapter_4.x.x.aar文件**
 
 **自定义广告源adapter参数**
 
@@ -1216,7 +1218,49 @@ https://gitee.com/adgain_sdk/AdGainSDK_Android_Adapter/tree/master/beizi
 
 
 
-## 十三、 测试广告位ID
+
+
+
+
+## 十三、Mediatom自定义广告接入文档
+
+**自定义适配器aar文件，添加：adgain_beizi_adapter_4.2.3.2.aar文件**
+
+如果想源码形式依赖，可下载[***自定义源码：***](https://gitee.com/adgain_sdk/AdGainSDK_Android_Adapter/tree/master/gromore)自行修改内容
+
+https://gitee.com/adgain_sdk/AdGainSDK_Android_Adapter/tree/master/mediatom
+
+**自定义广告源adapter参数**
+
+| 广告类型 | 广告类名称                                            |
+| -------- | ----------------------------------------------------- |
+| 开屏     | com.adgain.mediatom.adapter.AdGainSplashAdapter       |
+| 插屏     | com.adgain.mediatom.adapter.AdGainInterstitialAdapter |
+| 激励视频 | com.adgain.mediatom.adapter.AdGainRewardAdapter       |
+| 原生混合 | com.adgain.mediatom.adapter.AdGainMixNativeAdapter    |
+
+### 步骤1：添加自定义网络
+
+《广告管理》--->《广告主管理》--->《添加广告平台》---->《配置自定义广告类名》
+
+<img src="./imgs/m_addnetwork.png"  align="left" style="width: 100%; height:auto ">
+
+### 步骤2：添加广告位
+
+选择app--->选择广告类型---->添加AdGain 对应类型广告位json配置{"codeId":"11001801","appId":"11000500"}
+
+**codeId 和 appId 大小写不能变**
+
+<img src="./imgs/m_addcodeId.png"  align="left" style="width: 100%; height:auto ">
+
+### 步骤3：代码工程添加依赖
+
+```groovy
+implementation(name: 'adgain-sdk-4.2.5', ext: 'aar')
+implementation(name: 'adgain_mediatom_adapter_4.2.3.5', ext: 'aar')
+```
+
+## 十四、 测试广告位ID
 
 | 广告类型       | 广告ID   |
 | -------------- | -------- |
@@ -1228,7 +1272,7 @@ https://gitee.com/adgain_sdk/AdGainSDK_Android_Adapter/tree/master/beizi
 | 信息流模板ID   | 11001804 |
 | 横幅ID         | 11002037 |
 
-## 十四、 微信小程序支持
+## 十五、 微信小程序支持
 ```java
 AdGainSdk.getInstance().setWXAppId("微信开放平台APPID");
 ```
@@ -1252,11 +1296,11 @@ Gromore的微信appid 配置在广告位层级
 
 <img src="./imgs/gm_wxappid.png"  align="left" style="width: 100%; height:auto ">
 
-## 十五、 更新文档
+## 十六、 更新文档
 
 **v4.2.5**
 
-1. 屏蔽H5链接快应用乱跳
+1. 优化对H5链接形式的快应用的识别和频繁跳转拦截能力
 2. 激励视频时长及交互控制优化
 3. 优化上游Deeplink调起链路
 4. SDK 内部已知问题优化
