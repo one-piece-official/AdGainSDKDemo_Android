@@ -1224,7 +1224,7 @@ https://gitee.com/adgain_sdk/AdGainSDK_Android_Adapter/tree/master/beizi
 
 ## 十三、Mediatom自定义广告接入文档
 
-**自定义适配器aar文件，添加：adgain_beizi_adapter_4.2.3.2.aar文件**
+**自定义适配器aar文件，添加：adgain_mediatom_adapter_4.2.5.2.aar文件**
 
 如果想源码形式依赖，可下载[***自定义源码：***](https://gitee.com/adgain_sdk/AdGainSDK_Android_Adapter/tree/master/gromore)自行修改内容
 
