@@ -1289,7 +1289,7 @@ https://gitee.com/adgain_sdk/AdGainSDK_Android_Adapter/tree/master/admate
 
 ### 步骤2：添加广告位
 
-《联盟管理》--->《添加广告联盟账号》--->《自定义广告联盟》
+《流量管理》--->《广告位管理》--->《聚合管理》--->《添加广告源》
 
 
 
