@@ -1260,7 +1260,44 @@ implementation(name: 'adgain-sdk-4.2.5', ext: 'aar')
 implementation(name: 'adgain_mediatom_adapter_4.2.3.5', ext: 'aar')
 ```
 
-## 十四、 测试广告位ID
+
+
+## 十四、美数自定义广告接入文档
+
+**自定义适配器aar文件，添加：adgain_admate_adapter_4.x.x.aar文件**
+
+如果想源码形式依赖，可下载[***自定义源码：***](https://gitee.com/adgain_sdk/AdGainSDK_Android_Adapter/tree/master/gromore)自行修改内容
+
+https://gitee.com/adgain_sdk/AdGainSDK_Android_Adapter/tree/master/admate
+
+**自定义广告源adapter参数**
+
+| 广告类型 | 广告类名称                                           |
+| -------- | ---------------------------------------------------- |
+| 开屏     | com.adgain.admate.adapter.AdGainSplashAdapter        |
+| 插屏     | com.adgain.admate.adapter.AdGainInterstitialAdapter  |
+| 激励视频 | com.adgain.admate.adapter.AdGainRewardAdapter        |
+| 原生混合 | com.adgain.admate.adapter.AdGainUnifiedNativeAdapter |
+
+### 步骤1：添加自定义网络
+
+《联盟管理》--->《添加广告联盟账号》--->《自定义广告联盟》
+
+联盟竞价模式选： <strong >客户端（C2S）竞价</strong>
+
+<img src="./imgs/admate_add_adapter.png"  align="left" style="width: 100%; height:auto ">
+
+### 步骤2：添加广告位
+
+《联盟管理》--->《添加广告联盟账号》--->《自定义广告联盟》
+
+
+
+<img src="./imgs/admate_addcodeid.png"  align="left" style="width: 100%; height:auto ">
+
+
+
+## 十五、 测试广告位ID
 
 | 广告类型       | 广告ID   |
 | -------------- | -------- |
@@ -1272,7 +1309,7 @@ implementation(name: 'adgain_mediatom_adapter_4.2.3.5', ext: 'aar')
 | 信息流模板ID   | 11001804 |
 | 横幅ID         | 11002037 |
 
-## 十五、 微信小程序支持
+## 十六、 微信小程序支持
 ```java
 AdGainSdk.getInstance().setWXAppId("微信开放平台APPID");
 ```
@@ -1296,7 +1333,7 @@ Gromore的微信appid 配置在广告位层级
 
 <img src="./imgs/gm_wxappid.png"  align="left" style="width: 100%; height:auto ">
 
-## 十六、 更新文档
+## 十七、 更新文档
 
 **v4.2.7**
 
