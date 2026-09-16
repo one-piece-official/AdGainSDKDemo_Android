@@ -1297,7 +1297,44 @@ https://gitee.com/adgain_sdk/AdGainSDK_Android_Adapter/tree/master/admate
 
 
 
-## 十五、 测试广告位ID
+## 十五、UBiX自定义广告接入文档
+
+**自定义适配器aar文件，添加：adgain_ubix_adapter_4.x.x.aar文件**
+
+**自定义广告源adapter参数**
+
+| 广告类型 | 广告类名称                                          |
+| -------- | --------------------------------------------------- |
+| 开屏     | com.ubimax.adapter.adgain.AdGainSplashAdapter       |
+| 插屏     | com.ubimax.adapter.adgain.AdGainInterstitialAdapter |
+| 激励视频 | com.ubimax.adapter.adgain.AdGainRewardAdapter       |
+| 原生混合 | com.ubimax.adapter.adgain.AdGainFeedAdapter         |
+
+### 步骤1：添加自定义网络
+
+《广告网络》--->《自定义广告网络》---->添加对应广告类型Adapter类名--->保存--->编辑--->添加账号ID
+
+<img src="./imgs/ubix_add_network.png"  align="left" style="width: 100%; height:auto ">
+
+<img src="./imgs/ubix_add_account.png"  align="left" style="width: 100%; height:auto ">
+
+### 步骤2：添加广告位
+
+《流量管理》--->《应用管理》--->《广告网络》
+
+
+
+<img src="./imgs/ubix_add_app.png"  align="left" style="width: 100%; height:auto ">
+
+
+
+《瀑布流管理》--->《选择应用》--->《代码位》---->选择adgain,设置广告位及竞价模式
+
+<img src="./imgs/ubix_add_codeid.png"  align="left" style="width: 100%; height:auto ">
+
+
+
+## 十六、 测试广告位ID
 
 | 广告类型       | 广告ID   |
 | -------------- | -------- |
@@ -1309,7 +1346,7 @@ https://gitee.com/adgain_sdk/AdGainSDK_Android_Adapter/tree/master/admate
 | 信息流模板ID   | 11001804 |
 | 横幅ID         | 11002037 |
 
-## 十六、 微信小程序支持
+## 十七、 微信小程序支持
 ```java
 AdGainSdk.getInstance().setWXAppId("微信开放平台APPID");
 ```
@@ -1333,7 +1370,7 @@ Gromore的微信appid 配置在广告位层级
 
 <img src="./imgs/gm_wxappid.png"  align="left" style="width: 100%; height:auto ">
 
-## 十七、 更新文档
+## 十八、 更新文档
 
 **v4.2.7.2**
 
